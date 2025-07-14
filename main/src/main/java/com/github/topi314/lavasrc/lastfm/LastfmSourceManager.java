@@ -12,6 +12,7 @@ import com.sedmelluq.discord.lavaplayer.tools.io.HttpConfigurable;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpInterfaceManager;
 import com.sedmelluq.discord.lavaplayer.track.*;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -93,7 +94,6 @@ public class LastfmSourceManager extends MirroringAudioSourceManager implements 
 
 	@Override
 	public void encodeTrack(AudioTrack track, java.io.DataOutput output) throws IOException {
-		// No custom values to encode
 	}
 
 	@Override
@@ -123,7 +123,8 @@ public class LastfmSourceManager extends MirroringAudioSourceManager implements 
 	private JsonBrowser getJson(URIBuilder builder) throws IOException, URISyntaxException {
 		builder.addParameter("api_key", this.apiKey);
 		builder.addParameter("format", "json");
-		return LavaSrcTools.fetchResponseAsJson(httpInterfaceManager.getInterface(), builder.build());
+		HttpGet request = new HttpGet(builder.build());
+		return LavaSrcTools.fetchResponseAsJson(httpInterfaceManager.getInterface(), request);
 	}
 
 	private AudioItem getSearch(String query) throws IOException, URISyntaxException {
