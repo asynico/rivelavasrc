@@ -46,6 +46,10 @@ public class LastfmSourceManager extends MirroringAudioSourceManager implements 
 		this(apiKey, unused -> audioPlayerManager, new DefaultMirroringAudioTrackResolver(providers));
 	}
 
+	public LastfmSourceManager(String apiKey, String[] providers, Function<Void, AudioPlayerManager> audioPlayerManager) {
+		this(apiKey, audioPlayerManager, new DefaultMirroringAudioTrackResolver(providers));
+	}
+
 	public LastfmSourceManager(String apiKey, Function<Void, AudioPlayerManager> audioPlayerManager, MirroringAudioTrackResolver mirroringAudioTrackResolver) {
 		super(audioPlayerManager, mirroringAudioTrackResolver);
 		this.apiKey = apiKey;
@@ -94,6 +98,7 @@ public class LastfmSourceManager extends MirroringAudioSourceManager implements 
 
 	@Override
 	public void encodeTrack(AudioTrack track, java.io.DataOutput output) throws IOException {
+		// No custom values to encode
 	}
 
 	@Override
@@ -123,6 +128,7 @@ public class LastfmSourceManager extends MirroringAudioSourceManager implements 
 	private JsonBrowser getJson(URIBuilder builder) throws IOException, URISyntaxException {
 		builder.addParameter("api_key", this.apiKey);
 		builder.addParameter("format", "json");
+		// Convert URI to HttpGet request
 		HttpGet request = new HttpGet(builder.build());
 		return LavaSrcTools.fetchResponseAsJson(httpInterfaceManager.getInterface(), request);
 	}
