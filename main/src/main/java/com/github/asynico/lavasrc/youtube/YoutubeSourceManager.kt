@@ -91,73 +91,71 @@ class YoutubeSearchManager(
             }
         }
 
-        val items = result.searchSuggestionsSectionRenderer.contents.mapNotNull { suggestionRenderer ->
-            if (suggestionRenderer.searchSuggestionRenderer != null) {
-                BasicAudioText(suggestionRenderer.searchSuggestionRenderer.suggestion.joinRuns())
-            } else if (suggestionRenderer.musicResponsiveListItemRenderer != null) {
-                val item = suggestionRenderer.musicResponsiveListItemRenderer
-                val thumbnail = item.thumbnail.musicThumbnailRenderer
-                    .thumbnail.thumbnails.first().url
-                val url = item.navigationEndpoint.toUrl()
-                val artist = item.flexColumns.getOrNull(1)
-                    ?.musicResponsiveListItemFlexColumnRenderer
-                    ?.text?.runs?.getOrNull(2)?.text ?: "Unknown Author"
-                if (item.navigationEndpoint.watchEndpoint != null) {
-                    val info = AudioTrackInfo(
-                        item.flexColumns.first().musicResponsiveListItemFlexColumnRenderer.text.joinRuns(),
-                        artist,
-                        -1L,
-                        item.navigationEndpoint.watchEndpoint.videoId,
-                        false,
-                        url,
-                        thumbnail,
-                        null
-                    )
-                    YoutubeAudioTrack(info, playerManager().source(YoutubeAudioSourceManager::class.java))
-                } else if (item.navigationEndpoint.browseEndpoint != null) {
-                    val type =
-                        item.navigationEndpoint.browseEndpoint.browseEndpointContextSupportedConfigs.browseEndpointContextMusicConfig.pageType
-                    val name = item.flexColumns.first().musicResponsiveListItemFlexColumnRenderer.text.joinRuns()
-                    when (type) {
-                        PageType.MUSIC_PAGE_TYPE_ALBUM -> ExtendedAudioPlaylist(
-                            name,
-                            emptyList(),
-                            ExtendedAudioPlaylist.Type.ALBUM,
+        val items = result.contents.flatMap {
+            it.searchSuggestionsSectionRenderer.contents.mapNotNull { suggestionRenderer ->
+                if (suggestionRenderer.searchSuggestionRenderer != null) {
+                    BasicAudioText(suggestionRenderer.searchSuggestionRenderer.suggestion.joinRuns())
+                } else if (suggestionRenderer.musicResponsiveListItemRenderer != null) {
+                    val item = suggestionRenderer.musicResponsiveListItemRenderer
+                    val thumbnail = item.thumbnail.musicThumbnailRenderer
+                        .thumbnail.thumbnails.first().url
+                    val url = item.navigationEndpoint.toUrl()
+                    val artist = item.flexColumns.getOrNull(1)
+                        ?.musicResponsiveListItemFlexColumnRenderer
+                        ?.text?.runs?.getOrNull(2)?.text ?: "Unknown Author"
+                    if (item.navigationEndpoint.watchEndpoint != null) {
+                        val info = AudioTrackInfo(
+                            item.flexColumns.first().musicResponsiveListItemFlexColumnRenderer.text.joinRuns(),
+                            artist,
+                            -1L,
+                            item.navigationEndpoint.watchEndpoint.videoId,
+                            false,
                             url,
                             thumbnail,
-                            artist,
                             null
                         )
+                        YoutubeAudioTrack(info, playerManager().source(YoutubeAudioSourceManager::class.java))
+                    } else if (item.navigationEndpoint.browseEndpoint != null) {
+                        val type =
+                            item.navigationEndpoint.browseEndpoint.browseEndpointContextSupportedConfigs.browseEndpointContextMusicConfig.pageType
+                        val name = item.flexColumns.first().musicResponsiveListItemFlexColumnRenderer.text.joinRuns()
+                        when (type) {
+                            PageType.MUSIC_PAGE_TYPE_ALBUM -> ExtendedAudioPlaylist(
+                                name,
+                                emptyList(),
+                                ExtendedAudioPlaylist.Type.ALBUM,
+                                url,
+                                thumbnail,
+                                artist,
+                                null
+                            )
 
-                        PageType.MUSIC_PAGE_TYPE_ARTIST -> ExtendedAudioPlaylist(
-                            "$name's Top Tracks",
-                            emptyList(),
-                            ExtendedAudioPlaylist.Type.ARTIST,
-                            url,
-                            thumbnail,
-                            artist,
-                            null
-                        )
+                            PageType.MUSIC_PAGE_TYPE_ARTIST -> ExtendedAudioPlaylist(
+                                "$name's Top Tracks",
+                                emptyList(),
+                                ExtendedAudioPlaylist.Type.ARTIST,
+                                url,
+                                thumbnail,
+                                artist,
+                                null
+                            )
 
-                        PageType.MUSIC_PAGE_TYPE_PLAYLIST -> ExtendedAudioPlaylist(
-                            name,
-                            emptyList(),
-                            ExtendedAudioPlaylist.Type.PLAYLIST,
-                            url,
-                            thumbnail,
-                            artist,
-                            null
-                        )
-
-                        else -> {
-                            // Handle other cases if necessary
+                            PageType.MUSIC_PAGE_TYPE_PLAYLIST -> ExtendedAudioPlaylist(
+                                name,
+                                emptyList(),
+                                ExtendedAudioPlaylist.Type.PLAYLIST,
+                                url,
+                                thumbnail,
+                                artist,
+                                null
+                            )
                         }
+                    } else {
+                        null
                     }
                 } else {
                     null
                 }
-            } else {
-                null
             }
         }
         val finalTypes = types.ifEmpty { SEARCH_TYPES }
