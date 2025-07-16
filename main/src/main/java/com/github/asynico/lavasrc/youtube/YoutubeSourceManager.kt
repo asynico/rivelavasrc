@@ -1,4 +1,4 @@
-package com.github.asynico.rivelavasrc.youtube
+package com.github.asynico.lavasrc.youtube
 
 import com.github.topi314.lavalyrics.AudioLyricsManager
 import com.github.topi314.lavalyrics.lyrics.AudioLyrics
@@ -30,6 +30,7 @@ private fun MusicResponsiveListItemRenderer.NavigationEndpoint.toUrl() = when {
     browseEndpoint != null -> when (browseEndpoint.browseEndpointContextSupportedConfigs.browseEndpointContextMusicConfig.pageType) {
         PageType.MUSIC_PAGE_TYPE_PLAYLIST, PageType.MUSIC_PAGE_TYPE_ALBUM -> "https://music.youtube.com/browse/${browseEndpoint.browseId}"
         PageType.MUSIC_PAGE_TYPE_ARTIST -> "https://music.youtube.com/channel/${browseEndpoint.browseId}"
+        else -> error("Unknown page type: ${browseEndpoint.browseEndpointContextSupportedConfigs.browseEndpointContextMusicConfig.pageType}")
     }
 
     watchEndpoint != null -> "https://music.youtube.com/watch?v=${watchEndpoint.videoId}"
@@ -149,6 +150,7 @@ class YoutubeSearchManager(
                                 artist,
                                 null
                             )
+                            else -> null
                         }
                     } else {
                         null
