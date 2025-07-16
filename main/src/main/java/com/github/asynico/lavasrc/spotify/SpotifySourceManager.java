@@ -1,17 +1,17 @@
 
 package com.github.asynico.rivelavasrc.spotify;
 
-import com.github.asynico.lavalyrics.AudioLyricsManager;
-import com.github.asynico.lavalyrics.lyrics.AudioLyrics;
-import com.github.asynico.lavalyrics.lyrics.BasicAudioLyrics;
-import com.github.asynico.lavasearch.AudioSearchManager;
-import com.github.asynico.lavasearch.result.AudioSearchResult;
-import com.github.asynico.lavasearch.result.BasicAudioSearchResult;
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist;
-import com.github.asynico.rivelavasrc.LavaSrcTools;
-import com.github.asynico.rivelavasrc.mirror.DefaultMirroringAudioTrackResolver;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioSourceManager;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioTrackResolver;
+import com.github.topi314.lavalyrics.AudioLyricsManager;
+import com.github.topi314.lavalyrics.lyrics.AudioLyrics;
+import com.github.topi314.lavalyrics.lyrics.BasicAudioLyrics;
+import com.github.topi314.lavasearch.AudioSearchManager;
+import com.github.topi314.lavasearch.result.AudioSearchResult;
+import com.github.topi314.lavasearch.result.BasicAudioSearchResult;
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist;
+import com.github.asynico.lavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.mirror.DefaultMirroringAudioTrackResolver;
+import com.github.asynico.lavasrc.mirror.MirroringAudioSourceManager;
+import com.github.asynico.lavasrc.mirror.MirroringAudioTrackResolver;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.tools.JsonBrowser;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;

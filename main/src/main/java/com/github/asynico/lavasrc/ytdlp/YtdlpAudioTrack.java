@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.ytdlp;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioTrack;
+import com.github.asynico.lavasrc.ExtendedAudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.mpeg.MpegAudioTrack;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManager;

@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.tidal;
 
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioTrack;
+import com.github.asynico.lavasrc.mirror.MirroringAudioTrack;
 import com.sedmelluq.discord.lavaplayer.tools.io.SeekableInputStream;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;

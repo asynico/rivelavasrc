@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.deezer;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist;
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 
 import java.util.List;

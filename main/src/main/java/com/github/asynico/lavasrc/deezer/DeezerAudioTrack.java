@@ -1,7 +1,7 @@
 package com.github.asynico.rivelavasrc.deezer;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioTrack;
-import com.github.asynico.rivelavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.ExtendedAudioTrack;
+import com.github.asynico.lavasrc.LavaSrcTools;
 import com.sedmelluq.discord.lavaplayer.container.flac.FlacAudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.mp3.Mp3AudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.mpeg.MpegAudioTrack;

@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.qobuz;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioTrack;
+import com.github.asynico.lavasrc.ExtendedAudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.mp3.Mp3AudioTrack;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream;

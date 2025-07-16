@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 
-@ConfigurationProperties(prefix = "plugins.rivelavasrc.sources")
+@ConfigurationProperties(prefix = "plugins.lavasrc.sources")
 @Component
 public class SourcesConfig {
 

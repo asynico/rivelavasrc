@@ -3,7 +3,7 @@ package com.github.asynico.rivelavasrc.plugin.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "plugins.rivelavasrc.lastfm")
+@ConfigurationProperties(prefix = "plugins.lavasrc.lastfm")
 @Component
 public class LastfmConfig {
 

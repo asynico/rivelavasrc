@@ -3,7 +3,7 @@ package com.github.asynico.rivelavasrc.plugin.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "plugins.rivelavasrc.yandexmusic")
+@ConfigurationProperties(prefix = "plugins.lavasrc.yandexmusic")
 @Component
 public class YandexMusicConfig {
 

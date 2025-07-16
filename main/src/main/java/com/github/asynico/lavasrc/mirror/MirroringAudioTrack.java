@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.mirror;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioTrack;
+import com.github.asynico.lavasrc.ExtendedAudioTrack;
 import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.source.AudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;

@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.mirror;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioSourceManager;
+import com.github.asynico.lavasrc.ExtendedAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpConfigurable;

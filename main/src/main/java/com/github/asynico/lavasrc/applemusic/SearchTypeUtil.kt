@@ -1,6 +1,6 @@
 @file:JvmName("SearchTypeUtil")
 
-package com.github.asynico.rivelavasrc.applemusic
+package com.github.asynico.lavasrc.applemusic
 
 import com.github.topi314.lavasearch.result.AudioSearchResult
 

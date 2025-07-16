@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.deezer;
 
-import com.github.asynico.rivelavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.LavaSrcTools;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpPost;

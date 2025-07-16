@@ -1,6 +1,6 @@
 package com.github.asynico.rivelavasrc.spotify;
 
-import com.github.asynico.rivelavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.LavaSrcTools;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;

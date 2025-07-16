@@ -1,7 +1,7 @@
 package com.github.asynico.rivelavasrc.lastfm;
 
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioTrack;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioSourceManager;
+import com.github.asynico.lavasrc.mirror.MirroringAudioTrack;
+import com.github.asynico.lavasrc.mirror.MirroringAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.track.InternalAudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
 import com.sedmelluq.discord.lavaplayer.tools.io.SeekableInputStream;

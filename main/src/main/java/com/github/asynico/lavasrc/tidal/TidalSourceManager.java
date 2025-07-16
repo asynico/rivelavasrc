@@ -1,10 +1,10 @@
 package com.github.asynico.rivelavasrc.tidal;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist;
-import com.github.asynico.rivelavasrc.LavaSrcTools;
-import com.github.asynico.rivelavasrc.mirror.DefaultMirroringAudioTrackResolver;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioSourceManager;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioTrackResolver;
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist;
+import com.github.asynico.lavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.mirror.DefaultMirroringAudioTrackResolver;
+import com.github.asynico.lavasrc.mirror.MirroringAudioSourceManager;
+import com.github.asynico.lavasrc.mirror.MirroringAudioTrackResolver;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.tools.JsonBrowser;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;

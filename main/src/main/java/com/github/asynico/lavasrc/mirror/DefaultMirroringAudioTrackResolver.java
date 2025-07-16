@@ -1,7 +1,7 @@
 package com.github.asynico.rivelavasrc.mirror;
 
-import com.github.asynico.rivelavasrc.applemusic.AppleMusicSourceManager;
-import com.github.asynico.rivelavasrc.spotify.SpotifySourceManager;
+import com.github.asynico.lavasrc.applemusic.AppleMusicSourceManager;
+import com.github.asynico.lavasrc.spotify.SpotifySourceManager;
 import com.sedmelluq.discord.lavaplayer.track.AudioItem;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioReference;

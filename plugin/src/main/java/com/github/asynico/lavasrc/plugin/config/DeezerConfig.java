@@ -1,10 +1,10 @@
 package com.github.asynico.rivelavasrc.plugin.config;
 
-import com.github.asynico.rivelavasrc.deezer.DeezerAudioTrack;
+import com.github.asynico.lavasrc.deezer.DeezerAudioTrack;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "plugins.rivelavasrc.deezer")
+@ConfigurationProperties(prefix = "plugins.lavasrc.deezer")
 @Component
 public class DeezerConfig {
 

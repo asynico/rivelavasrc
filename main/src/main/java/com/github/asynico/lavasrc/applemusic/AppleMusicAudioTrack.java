@@ -1,7 +1,7 @@
 package com.github.asynico.rivelavasrc.applemusic;
 
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioSourceManager;
-import com.github.asynico.rivelavasrc.mirror.MirroringAudioTrack;
+import com.github.asynico.lavasrc.mirror.MirroringAudioSourceManager;
+import com.github.asynico.lavasrc.mirror.MirroringAudioTrack;
 import com.sedmelluq.discord.lavaplayer.container.mpeg.MpegAudioTrack;
 import com.sedmelluq.discord.lavaplayer.tools.io.SeekableInputStream;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;

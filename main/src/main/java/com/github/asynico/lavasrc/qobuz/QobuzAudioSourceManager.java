@@ -1,8 +1,8 @@
 package com.github.asynico.rivelavasrc.qobuz;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist;
-import com.github.asynico.rivelavasrc.ExtendedAudioSourceManager;
-import com.github.asynico.rivelavasrc.LavaSrcTools;
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist;
+import com.github.asynico.lavasrc.ExtendedAudioSourceManager;
+import com.github.asynico.lavasrc.LavaSrcTools;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.tools.JsonBrowser;
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools;

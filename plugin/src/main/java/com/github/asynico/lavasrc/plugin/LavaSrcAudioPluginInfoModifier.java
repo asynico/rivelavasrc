@@ -1,8 +1,8 @@
 package com.github.asynico.rivelavasrc.plugin;
 
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist;
-import com.github.asynico.rivelavasrc.ExtendedAudioTrack;
-import com.github.asynico.rivelavasrc.spotify.SpotifyAudioTrack;
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist;
+import com.github.asynico.lavasrc.ExtendedAudioTrack;
+import com.github.asynico.lavasrc.spotify.SpotifyAudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import dev.arbjerg.lavalink.api.AudioPluginInfoModifier;

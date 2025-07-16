@@ -7,11 +7,11 @@ import com.github.topi314.lavasearch.result.AudioSearchResult
 import com.github.topi314.lavasearch.result.AudioText
 import com.github.topi314.lavasearch.result.BasicAudioSearchResult
 import com.github.topi314.lavasearch.result.BasicAudioText
-import com.github.asynico.rivelavasrc.ExtendedAudioPlaylist
-import com.github.asynico.rivelavasrc.youtube.innertube.MusicResponsiveListItemRenderer
-import com.github.asynico.rivelavasrc.youtube.innertube.requestLyrics
-import com.github.asynico.lavarivelavasrcsrc.youtube.innertube.requestMusicAutoComplete
-import com.github.asynico.rivelavasrc.youtube.innertube.takeFirstSearchResult
+import com.github.asynico.lavasrc.ExtendedAudioPlaylist
+import com.github.asynico.lavasrc.youtube.innertube.MusicResponsiveListItemRenderer
+import com.github.asynico.lavasrc.youtube.innertube.requestLyrics
+import com.github.asynico.lavasrc.youtube.innertube.requestMusicAutoComplete
+import com.github.asynico.lavasrc.youtube.innertube.takeFirstSearchResult
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager
 import com.sedmelluq.discord.lavaplayer.tools.io.HttpClientTools
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack
@@ -22,7 +22,7 @@ import dev.schlaubi.lyrics.LyricsNotFoundException
 import org.apache.http.client.methods.HttpGet
 import java.net.URLEncoder
 import java.util.*
-import com.github.asynico.rivelavasrc.youtube.innertube.MusicResponsiveListItemRenderer.NavigationEndpoint.BrowseEndpoint.Configs.Config.Type as PageType
+import com.github.asynico.lavasrc.youtube.innertube.MusicResponsiveListItemRenderer.NavigationEndpoint.BrowseEndpoint.Configs.Config.Type as PageType
 
 private val searchPattern = """\["([\w\s]+)",\s*\d+,\s*\[(?:\d+,?\s*)+]""".toRegex()
 
